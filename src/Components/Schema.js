@@ -27,4 +27,9 @@ export const schema = yup.object().shape({
   City: yup.string(),
   Country: yup.string(),
   Pincode: yup.string(),
+  Occupation: yup.string(),
+  Religion: yup.string(),
+  Marital: yup.string(),
+  Blood: yup.string(),
+  Nationality: yup.string(),
 });

@@ -263,63 +263,64 @@ export const Form = () => {
           </select>
           <p>{errors.Religion?.message}</p>
         </div>{" "}
-        <label htmlFor="State" className=" form-label-sm col-1 ">
-          State
+        <label htmlFor="Marital" className=" form-label-sm col-1  ">
+          Marital status
         </label>
-        <div className="col-3">
-          <input
-            type="text"
-            placeholder="Enter State"
-            {...register("State")}
-            id="State"
+        <div className="col-2 ">
+          <select
+            id="Marital"
             className="form-control"
-          />
-          <p>{errors.State?.message}</p>
+            {...register("Marital")}
+          >
+            <option value="">Enter Marital status</option>
+            <option value="Married">Married</option>
+            <option value="Single">Single</option>
+          </select>
+          <p>{errors.Marital?.message}</p>
         </div>{" "}
-        <label htmlFor="City" className=" form-label-sm col-1 ">
-          City
+        <label htmlFor="Blood" className=" form-label-sm col-1  ">
+          Blood Group
         </label>
-        <div className="col-2">
-          <input
-            type="text"
-            placeholder="Enter city"
-            {...register("State")}
-            id="City"
-            className="form-control"
-          />
-          <p>{errors.City?.message}</p>
+        <div className="col-2 ">
+          <select id="Blood" className="form-control" {...register("Blood")}>
+            <option value="">Group</option>
+
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+          <p>{errors.Blood?.message}</p>
         </div>{" "}
       </div>
-
       <div className="row">
-        <label htmlFor="Country" className=" form-label-sm col-1 ">
-          Country
+        <label htmlFor="Nationality" className=" form-label-sm col-1 ">
+          Nationality
         </label>
         <div className="col-3">
           <input
-            {...register("Country")}
-            id="Country"
+            {...register("Nationality")}
+            id="Nationality"
             className="form-control"
             value={"India"}
           />
-          <p>{errors.Country?.message}</p>
-        </div>{" "}
-        <label htmlFor="Pincode" className=" form-label-sm col-1 offset-1">
-          Pincode
-        </label>
-        <div className="col-2">
-          <input
-            type="text"
-            placeholder="Enter Pincode"
-            {...register("State")}
-            id="Pincode"
-            className="form-control"
-          />
-          <p>{errors.Pincode?.message}</p>
+          <p>{errors.Nationality?.message}</p>
         </div>{" "}
       </div>
-
-      <input type="submit" />
+      <div className="flexmo">
+        <button type="reset" className="btn btn-outline-danger gap">
+          {" "}
+          Cancel
+        </button>
+        <button className="btn btn-success" type="submit">
+          Submit
+        </button>
+      </div>
+      {/* <input type="submit" /> */}
     </form>
   );
 };
